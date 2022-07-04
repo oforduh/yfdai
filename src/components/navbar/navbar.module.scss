@@ -1,0 +1,263 @@
+.container {
+  //   border: 2px solid red;
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .contentContainer {
+    width: 80%;
+    min-height: unset;
+    height: 90%;
+    display: flex;
+    // border: 2px solid red;
+    justify-content: space-between;
+    align-items: center;
+    .imgContainer {
+      min-width: 100px;
+      height: 100%;
+      //   border: 2px solid blue;
+      img {
+        width: 150px;
+        height: 50px;
+      }
+    }
+    .navLink {
+      //   border: 3px solid red;
+      min-width: 100px;
+      height: 100%;
+      ul {
+        min-width: 100px;
+        height: 100%;
+        display: flex;
+
+        li {
+          height: 50px;
+          //   display: flex;
+          //   border: 2px solid red;
+
+          list-style: none;
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin-left: 20px;
+            span {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding-right: 5px;
+              height: 100%;
+            }
+            .arrowLogo {
+              // border: 2px solid red;
+              padding-top: 5px;
+            }
+            a {
+              text-decoration: none;
+              color: var(--dark);
+              font-weight: 600;
+              &:hover {
+                color: var(--primary);
+              }
+            }
+            button {
+              height: 100%;
+              font-family: Montserrat;
+              width: 150px;
+              cursor: pointer;
+              font-weight: bold;
+              background-color: var(--primary);
+              color: var(--white);
+              font-weight: bolder;
+              border: none;
+              outline: none;
+              border-radius: 9000px;
+              font-size: 16px;
+              a {
+                color: var(--white);
+                &:hover {
+                  color: var(--white);
+                }
+              }
+            }
+          }
+          .extra {
+            position: relative;
+            div {
+              min-height: 120px;
+              min-width: 250px;
+              position: absolute;
+              border: 1px solid red;
+              top: 0;
+              margin: 0;
+              margin-top: 40px;
+              z-index: 2;
+              background-color: var(--white);
+              display: none;
+              right: 0;
+              height: unset;
+              ul {
+                display: block;
+                width: 100%;
+                li {
+                  display: flex;
+                  justify-content: flex-end;
+                  height: 30px;
+                  width: 100%;
+                  //   border: 2px solid red;
+                  padding: 10px 0;
+                  a {
+                    color: var(--dark);
+                    &:hover {
+                      color: var(--primary);
+                    }
+                  }
+                }
+              }
+
+              //   display: none;
+
+              //   display: none;
+            }
+            &:hover {
+              div {
+                display: block;
+                li {
+                  height: unset;
+                }
+              }
+            }
+          }
+        }
+      }
+      .hamburgerContainer {
+        display: none;
+      }
+    }
+  }
+  .fullPage {
+    display: none;
+    background-color: var(--white);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    // min-height: 100vh;
+    .contentContainer {
+      width: 90%;
+      .imgContainer {
+        img {
+          width: 120px;
+          height: 40px;
+        }
+      }
+      .navLink {
+        ul {
+          display: none;
+        }
+        .hamburgerContainer {
+          //   border: 3px solid red;
+          color: var(--dark);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 36px;
+        }
+      }
+    }
+    .fullPage {
+      z-index: 3;
+      display: block;
+      position: absolute;
+      width: 100%;
+      min-height: calc(100vh - 80px);
+      top: 0;
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+      //   align-items: center;
+      .fullPageContent {
+        // border: 3px solid blue;
+        width: 70%;
+        min-height: 200px;
+        ul {
+          //   border: 2px solid red;
+          list-style: none;
+          li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // border: 3px solid red;
+            padding: 15px;
+            div {
+              a {
+                text-decoration: none;
+                font-size: 30px;
+                color: var(--dark);
+                font-weight: bolder;
+                cursor: pointer;
+              }
+              button {
+                background-color: var(--primary);
+                height: 50px;
+                border-radius: 900px;
+                width: 200px;
+                border: none;
+                outline: none;
+                a {
+                  text-decoration: none;
+                  font-size: 20px;
+                  color: var(--white);
+                  font-weight: bolder;
+                  cursor: pointer;
+                }
+              }
+            }
+            .extra {
+              min-height: 50px;
+              //   border: 2px solid red;
+              span {
+                // border: 2px solid red;
+                display: block;
+                width: 100%;
+                text-align: center;
+                // height: 100%;
+              }
+              div {
+                height: 0;
+                // display: none;
+              }
+            }
+            .productExtra,
+            .resourceExtra {
+              //   border: 2px solid red;
+              max-height: 0px;
+              overflow: hidden;
+              width: 100%;
+              transition: all 0.6s ease-in-out;
+              ul {
+                text-align: center;
+                width: 100%;
+                li {
+                  width: 100%;
+                  a {
+                    text-decoration: none;
+                    font-size: 18px;
+                  }
+                }
+              }
+            }
+          }
+          .productContainer {
+            display: block;
+            // border: 2px solid blue;
+          }
+        }
+      }
+    }
+  }
+}
