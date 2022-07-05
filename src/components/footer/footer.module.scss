@@ -55,7 +55,7 @@
     .footerContent {
       width: 90%;
       height: unset;
-      border: 3px solid green;
+    //   border: 3px solid green;
       font-size: 13px;
       flex-direction: column;
       .logoContainer {
@@ -71,7 +71,7 @@
         }
       }
       .copyrightContainer {
-        border: 3px solid red;
+        // border: 3px solid red;
         width: 100%;
         margin-top: 30px;
         display: block;
