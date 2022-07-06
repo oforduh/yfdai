@@ -87,7 +87,7 @@ const Navbar = ({ noScroll, setNoScroll }) => {
                   <ul>
                     <li>
                       <a
-                        href="https://yfdai2.com/token"
+                        href="https://yfdai2.com/roadmap"
                         target="_blank"
                         rel="noreferrer"
                       >
