@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Apartment from "../../components/apartment/apartment";
 import Footer from "../../components/footer/footer";
 import LandingCover from "../../components/landingCover/landingCover";
 import Navbar from "../../components/navbar/navbar";
@@ -20,6 +21,9 @@ const Home = () => {
       </div>
       <div className={styles.bannerContainer}>
         <LandingCover />
+      </div>
+      <div className={styles.apartmentContainer}>
+        <Apartment />
       </div>
       <div className={styles.footerContainer}>
         <Footer />
