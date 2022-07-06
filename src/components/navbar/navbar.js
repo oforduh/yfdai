@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { IoIosArrowForward } from "react-icons/io";
 
-const Navbar = () => {
+const Navbar = ({ noScroll, setNoScroll }) => {
   const [toggleIcon, setToggleIcon] = useState(false);
   const [state, setState] = useState({
     product: false,
@@ -15,6 +15,7 @@ const Navbar = () => {
   });
   const handleToggleNavIcon = () => {
     setToggleIcon(!toggleIcon);
+    setNoScroll(!noScroll);
   };
 
   // functionality that handle the nav item toggle
@@ -23,8 +24,6 @@ const Navbar = () => {
     newObj[id] = !newObj[id];
     setState(newObj);
   };
-
-  console.log(state);
 
   return (
     <div className={styles.container}>

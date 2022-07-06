@@ -122,6 +122,7 @@
           border-radius: 900px;
           color: var(--white);
           font-size: 20px;
+          font-family: "Montserrat";
         }
 
         .mobileErc20Logo {
@@ -237,6 +238,164 @@
           h3 {
             font-size: 30px;
             color: #828282;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    .contentContainer {
+      //   border: 3px solid red;
+      .contentContainerChild {
+        // border: 3px solid red;
+        width: 90%;
+        .banner1 {
+          //   border: 2px solid blue;
+          padding-top: 30px;
+          img {
+            width: 150px;
+            height: 150px;
+          }
+        }
+        .banner2 {
+          //   border: 2px solid blue;
+          div {
+            text-align: center;
+            img {
+              width: 70%;
+              height: 30%;
+            }
+            h3 {
+              //   text-align: center;
+              margin-top: 10px;
+            }
+          }
+        }
+        .banner3 {
+          // border: 2px solid blue;
+          img {
+            width: 120px;
+            height: 40px;
+          }
+        }
+        .textSection {
+          //   border: 2px solid blue;
+          font-size: 16px;
+          .bannerButton {
+            margin-top: 30px;
+            img {
+              width: 150px;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+    .mobileSection {
+      //   border: 3px solid red;
+      .mobileSectionContent {
+        width: 90%;
+        // border: 3px solid red;
+        flex-direction: column;
+        .mobileImage {
+          width: 100%;
+        }
+        .mobileText {
+          text-align: center;
+          width: 100%;
+          //   border: 3px solid blue;
+          .h2HeaderContainer {
+            // border: 3px solid blue;
+            h2 {
+              font-weight: 600;
+              font-size: 22px;
+            }
+          }
+          .h3HeaderContainer {
+            // border: 3px solid blue;
+            margin-bottom: 30px;
+            h3 {
+              font-weight: 400;
+              font-size: 18px;
+            }
+          }
+          button {
+            font-size: 16px;
+            height: 50px;
+            width: 180px;
+          }
+        }
+      }
+    }
+    .robotSection {
+      padding-top: 30px;
+      //   border: 3px solid red;
+      .robotSectionContent {
+        flex-direction: column-reverse;
+        width: 90%;
+        // border: 2px solid blue;
+      }
+      .roboText {
+        // border: 3px solid green;
+        height: unset !important;
+        min-height: 200px;
+        width: 100% !important;
+        text-align: center;
+        .h2HeaderRobot {
+          //   height: 100%;
+          h2 {
+            font-size: 25px !important;
+            span {
+              color: var(--primary);
+            }
+          }
+          .buttonContRobot {
+            height: 80px;
+            margin-top: 20px !important;
+            // border: 2px solid purple;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+            .roboImage2 {
+              height: 100%;
+              img {
+                width: 200px;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+          }
+        }
+      }
+      .roboImage {
+        width: 100%;
+      }
+    }
+    .c21ksection {
+      border: 2px solid red;
+      .c21ksectionContent {
+        width: 90%;
+        .h2SectionCont {
+          padding-top: 40px;
+          width: 50%;
+          h2 {
+            color: var(--white);
+            font-size: 50px;
+            font-weight: 900;
+            span {
+              color: var(--primary);
+            }
+          }
+          .h3headerTagSection {
+            margin-top: 30px;
+            h3 {
+              font-size: 30px;
+              color: #828282;
+            }
           }
         }
       }
