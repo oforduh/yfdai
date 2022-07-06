@@ -345,6 +345,7 @@
         width: 100% !important;
         text-align: center;
         .h2HeaderRobot {
+          text-align: center !important;
           //   height: 100%;
           h2 {
             font-size: 20px !important;
@@ -376,15 +377,17 @@
       }
     }
     .c21ksection {
-    //   border: 2px solid red;
+      //   border: 2px solid red;
+      min-height: 500px;
       .c21ksectionContent {
         width: 90%;
         .h2SectionCont {
-          padding-top: 40px;
-          width: 50%;
+          flex-direction: column;
+          padding-top: 0;
+          width: 100%;
           h2 {
             color: var(--white);
-            font-size: 50px;
+            font-size: 25px;
             font-weight: 900;
             span {
               color: var(--primary);
@@ -393,7 +396,7 @@
           .h3headerTagSection {
             margin-top: 30px;
             h3 {
-              font-size: 30px;
+              font-size: 18px;
               color: #828282;
             }
           }
