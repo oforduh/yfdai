@@ -1,8 +1,16 @@
 {
   "cSpell.ignoreWords": [
+    "ANVBH",
+    "BVHJ",
+    "DEFI",
+    "JCNH",
     "Metaverse",
     "Roadmap",
+    "YFDA",
     "YFDAI",
+    "YSYJW",
+    "ZKSYNC",
+    "apikey",
     "bignumber",
     "browserslist",
     "ksection",
@@ -10,8 +18,12 @@
     "robo",
     "robotbtn",
     "robotn",
+    "setchain",
+    "setuser",
+    "setwallet",
     "toastify",
     "tokenswap",
+    "userwallet",
     "webfonts"
   ]
 }

@@ -8,7 +8,8 @@ import mobileImage from "../../assets/mobile.png";
 import roboImage from "../../assets/robot.png";
 import robotn1 from "../../assets/robotbtn1.png";
 import robotn2 from "../../assets/robotbtn2.png";
-import bottomBanner from "../../assets/bottom2.jpg";
+import { Link } from "react-router-dom";
+
 
 const LandingCover = () => {
   return (
@@ -59,7 +60,9 @@ const LandingCover = () => {
               <h3>Swap YF-DAI for YFDAI1 and </h3>
               <h3>join the future of finance</h3>
             </div>
-            <button>Swap Now</button>
+            <button>
+              <Link to="/tokenswap">Swap Now</Link>
+            </button>
           </div>
           <div className={styles.mobileImage}>
             <img src={mobileImage} alt={mobileImage} />
