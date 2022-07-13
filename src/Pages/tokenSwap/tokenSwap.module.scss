@@ -1,0 +1,373 @@
+.container {
+  //   border: 3px solid red;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--white);
+  .content {
+    width: 90%;
+    height: 100%;
+    // border: 1px solid blue;
+    .navBarParent {
+      //   border: 2px solid red;
+      width: 100%;
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logoParent {
+        width: 200px;
+        height: 60%;
+        // border: 2px solid red;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .walletConnectDiv {
+        width: 200px;
+        height: 60%;
+        button {
+          height: 100%;
+          font-family: Montserrat;
+          width: 100%;
+          cursor: pointer;
+          font-weight: bold;
+          background-color: var(--primary);
+          color: var(--white);
+          font-weight: 600;
+          border: none;
+          outline: none;
+          font-size: 20px;
+          a {
+            color: var(--white);
+            &:hover {
+              color: var(--white);
+            }
+          }
+        }
+      }
+    }
+    .swapParentContainer {
+      //   border: 3px solid blue;
+      background-color: #f8f8f8;
+      padding-top: 70px;
+      //   border: 2px solid red;
+      display: flex;
+      justify-content: center;
+      height: calc(100vh - 80px);
+      //   align-items: center;
+      width: 100%;
+      .swapParentContent {
+        width: 50%;
+        // border: 2px solid red;
+        .firstSection {
+          min-height: 150px;
+          border: 2px solid #ccc;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .flexParent {
+            height: 80%;
+            width: 100%;
+            .flexItemsDiv {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 10px;
+              padding: 5px 20px;
+              font-weight: 600;
+              font-size: 20px;
+            }
+          }
+        }
+        .secondSection {
+          border: 2px solid #ccc;
+          margin-top: 30px;
+          min-height: 200px;
+          //   border: 2px solid blue;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .flexParent2 {
+            min-height: 150px;
+            width: 100%;
+            .flexItemsDiv2 {
+              min-height: 150px;
+              //   border: 2px solid red;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 10px;
+              padding: 0 20px;
+              font-weight: 600;
+              font-size: 16px;
+              .formParent {
+                min-height: 100px;
+                // border: 2px solid red;
+                width: 40%;
+                .formGroup {
+                  width: 100%;
+                  label {
+                    display: block;
+                    span {
+                      color: var(--primary);
+                      font-size: 14px;
+                    }
+                  }
+                  input {
+                    width: 100%;
+                    height: 50px;
+                    padding: 8px 10px;
+                    border-radius: 5px;
+                    margin: 15px 0;
+                    outline: none;
+                  }
+                }
+              }
+              .approveParent {
+                min-height: 100px;
+                width: 60%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                // border: 3px solid red;
+                button {
+                  width: 200px;
+                  height: 50px;
+                  cursor: pointer;
+                  border: none;
+                  outline: none;
+                  font-weight: 500;
+                  font-size: 16px;
+                  &:nth-child(1) {
+                    background-color: var(--dark);
+                    color: var(--white);
+                  }
+                  &:nth-child(3) {
+                    color: var(--dark);
+                    border: 3px solid #ccc;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .noTokenContainer {
+      //   border: 3px solid blue;
+      background-color: #f8f8f8;
+      padding-top: 70px;
+      //   border: 2px solid red;
+      display: flex;
+      justify-content: center;
+      height: calc(100vh - 80px);
+      align-items: center;
+      width: 100%;
+      .noTokenContent {
+        text-align: center;
+        // border: 2px solid red;
+        width: 100%;
+        h1 {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    .content {
+      //   border: 1px solid blue;
+      .navBarParent {
+        height: 80px;
+        .logoParent {
+          width: 180px;
+          height: 50%;
+        }
+        .walletConnectDiv {
+          width: 180px;
+          height: 50%;
+          button {
+            font-weight: 500;
+            font-size: 18px;
+            a {
+              color: var(--white);
+              &:hover {
+                color: var(--white);
+              }
+            }
+          }
+        }
+      }
+      .swapParentContainer {
+        .swapParentContent {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    .content {
+      //   border: 1px solid blue;
+      .navBarParent {
+        height: 80px;
+        .logoParent {
+          width: 180px;
+          height: 50%;
+        }
+        .walletConnectDiv {
+          width: 180px;
+          height: 50%;
+          button {
+            font-weight: 500;
+            font-size: 16px;
+          }
+        }
+      }
+      .swapParentContainer {
+        .swapParentContent {
+          width: 100%;
+          //   border: 1px solid blue;
+          .firstSection {
+            .flexParent {
+              .flexItemsDiv {
+                font-weight: 400;
+                font-size: 16px;
+              }
+            }
+          }
+          .secondSection {
+            display: flex;
+            flex-direction: column;
+            .flexParent2 {
+              .flexItemsDiv2 {
+                flex-direction: column;
+                font-weight: 600;
+                font-size: 14px;
+                .formParent {
+                  min-height: 100px;
+                  //   border: 2px solid red;
+                  width: 100%;
+                  .formGroup {
+                    width: 100%;
+                    label {
+                      span {
+                        font-size: 13px;
+                      }
+                    }
+                    input {
+                      width: 100%;
+                      height: 40px;
+                      font-size: 16px;
+                    }
+                  }
+                }
+                .approveParent {
+                  width: 100%;
+                  min-height: 40px;
+                  button {
+                    width: 150px;
+                    font-weight: 500;
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    .content {
+      width: 95%;
+      //   border: 1px solid blue;
+      .navBarParent {
+        height: 60px;
+        .logoParent {
+          width: 120px;
+        }
+        .walletConnectDiv {
+          width: 120px;
+          height: 50%;
+          button {
+            font-weight: 600;
+            font-size: 13px;
+          }
+        }
+      }
+      .swapParentContainer {
+        .swapParentContent {
+          width: 100%;
+          //   border: 1px solid blue;
+          .firstSection {
+            .flexParent {
+              .flexItemsDiv {
+                font-weight: 400;
+                font-size: 13px;
+              }
+            }
+          }
+          .secondSection {
+            display: flex;
+            flex-direction: column;
+            .flexParent2 {
+              .flexItemsDiv2 {
+                flex-direction: column;
+                font-weight: 600;
+                font-size: 13px;
+                .formParent {
+                  min-height: 100px;
+                  //   border: 2px solid red;
+                  width: 100%;
+                  .formGroup {
+                    width: 100%;
+                    label {
+                      span {
+                        font-size: 13px;
+                      }
+                    }
+                    input {
+                      width: 100%;
+                      height: 40px;
+                      font-size: 16px;
+                    }
+                  }
+                }
+                .approveParent {
+                  width: 100%;
+                  min-height: 40px;
+                  button {
+                    width: 150px;
+                    font-weight: 500;
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .noTokenContainer {
+        // border: 2px solid red;
+        h1 {
+          color: var(--primary);
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
