@@ -7,6 +7,7 @@ import { formatFixed } from "@exodus/ethersproject-bignumber";
 import { useEffect } from "react";
 import { getTokenBalances, transferToken } from "../../helper/helpers";
 import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 
 const TokenSwap = () => {
   const [walletAddress, setwalletAddress] = useState("");
@@ -22,7 +23,11 @@ const TokenSwap = () => {
     swap: false,
   });
   const [stakeValue, setStakeValue] = useState(null);
-  let userYfdaiBal;
+
+  const navigate = useNavigate();
+  const handleToHomePage = () => {
+    navigate("/");
+  };
 
   const setProcessFunction = (id) => {
     let newObj = { ...processingStaking };
@@ -149,13 +154,12 @@ const TokenSwap = () => {
   const fArray = [...listAllTokens];
   const result = fArray?.filter((item) => {
     if (item.address === "0xf4cd3d3fda8d7fd6c5a500203e38640a70bf9577") {
-      userYfdaiBal = formatBalance(item.balance, item.decimals);
       return item.address;
     }
     return false;
   });
-  console.log(result);
-  console.log(`This is the balance ${userYfdaiBal}`);
+  // console.log(result);
+  // console.log(`This is the balance ${userYfdaiBal}`);
   // setStakeValue(userYfdaiBal);
 
   const setTransferClick = async (balanceObj) => {
@@ -192,7 +196,13 @@ const TokenSwap = () => {
       <div className={styles.content}>
         <div className={styles.navBarParent}>
           <div className={styles.logoParent}>
-            <img src={logo} alt={logo} />
+            <img
+              src={logo}
+              alt={logo}
+              onClick={() => {
+                handleToHomePage();
+              }}
+            />
           </div>
           <div className={styles.walletConnectDiv}>
             <button

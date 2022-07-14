@@ -9,9 +9,13 @@ import roboImage from "../../assets/robot.png";
 import robotn1 from "../../assets/robotbtn1.png";
 import robotn2 from "../../assets/robotbtn2.png";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 const LandingCover = () => {
+  const navigate = useNavigate();
+  const handleToSwapPage = () => {
+    navigate("/tokenswap");
+  };
   return (
     <div className={styles.container}>
       <div className={styles.contentContainer}>
@@ -39,7 +43,11 @@ const LandingCover = () => {
             </span>
 
             <div className={styles.bannerButton}>
-              <img src={bannerButton} alt={bannerButton} />
+              <img
+                src={bannerButton}
+                alt={bannerButton}
+                onClick={handleToSwapPage}
+              />
             </div>
           </div>
         </div>
