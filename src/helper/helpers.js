@@ -38,15 +38,12 @@ export const getTokenBalances = async ({
     APIKeyString,
     userWallet,
   });
-  console.log(erc20TokensObj);
   // returns an array of the tokens balances
   const erc20Balances = await getAllERC20Balances(
     erc20TokensObj,
     provider,
     userWallet
   );
-
-  console.log(erc20Balances);
   return [...erc20Balances];
 };
 
@@ -56,7 +53,7 @@ export const getERC20Tokens = async function ({
   APIKeyString,
   userWallet,
 }) {
-  console.log(chainID, APIKeyString, userWallet);
+  // console.log(chainID, APIKeyString, userWallet);
   let erc20Query = getQueryERC20Events(chainID, userWallet, APIKeyString);
   // return;
   try {

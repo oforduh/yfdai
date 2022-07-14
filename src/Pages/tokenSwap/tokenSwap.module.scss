@@ -63,6 +63,7 @@
       //   align-items: center;
       width: 100%;
       .swapParentContent {
+        // border: 3px solid red;
         width: 50%;
         // border: 2px solid red;
         .firstSection {
@@ -158,6 +159,22 @@
           }
         }
       }
+      .notEligible {
+        width: 100%;
+        // border: 2px solid red;
+        display: grid;
+        place-items: center;
+        font-size: 30px;
+        color: var(--primary);
+      }
+      .loadingStyling {
+        width: 100%;
+        // border: 2px solid red;
+        display: grid;
+        place-items: center;
+        font-size: 30px;
+        color: var(--primary);
+      }
     }
     .noTokenContainer {
       //   border: 3px solid blue;
@@ -175,6 +192,40 @@
         width: 100%;
         h1 {
           color: var(--primary);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1500px) {
+  .container {
+    .content {
+      // border: 1px solid blue;
+      .navBarParent {
+        height: 80px;
+        .logoParent {
+          width: 180px;
+          height: 50%;
+        }
+        .walletConnectDiv {
+          width: 180px;
+          height: 50%;
+          button {
+            font-weight: 500;
+            font-size: 18px;
+            a {
+              color: var(--white);
+              &:hover {
+                color: var(--white);
+              }
+            }
+          }
+        }
+      }
+      .swapParentContainer {
+        .swapParentContent {
+          width: 70%;
+          // border: 2px solid green;
         }
       }
     }
