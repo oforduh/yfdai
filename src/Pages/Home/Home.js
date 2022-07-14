@@ -7,7 +7,6 @@ import styles from "./home.module.scss";
 
 const Home = () => {
   const [noScroll, setNoScroll] = useState(false);
-  console.log(noScroll);
   return (
     <div
       className={styles.container}

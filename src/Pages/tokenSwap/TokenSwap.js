@@ -22,7 +22,7 @@ const TokenSwap = () => {
     approve: false,
     swap: false,
   });
-  const [stakeValue, setStakeValue] = useState(null);
+  const [stakeValue, setStakeValue] = useState("");
 
   const navigate = useNavigate();
   const handleToHomePage = () => {
@@ -55,11 +55,10 @@ const TokenSwap = () => {
         setchainID(parseInt(chainId));
 
         // getBalance function accepts strings only
-        let balance = await provider.getBalance(account);
-        balance = ethers.utils.formatEther(balance);
-        balance = parseFloat(balance).toFixed(5);
+        // let balance = await provider.getBalance(account);
+        // balance = ethers.utils.formatEther(balance);
+        // balance = parseFloat(balance).toFixed(5);
 
-        console.log(balance);
         setProcessing(false);
         setuserWallet(account);
         sessionStorage.setItem("setuserWallet", account);
@@ -163,8 +162,7 @@ const TokenSwap = () => {
   // setStakeValue(userYfdaiBal);
 
   const setTransferClick = async (balanceObj) => {
-    console.log(`yes`);
-    console.log(balanceObj);
+    // console.log(balanceObj);
     if (typeof to !== "string") {
       to = `${to}`;
     } else {
@@ -228,11 +226,19 @@ const TokenSwap = () => {
                     <div className={styles.flexParent}>
                       <div className={styles.flexItemsDiv}>
                         <span>Old $YFDAI Balance</span>
-                        <span>0.00000 YFDAI</span>
+
+                        {result.map((item, index) => (
+                          <span key={index}>
+                            {parseFloat(
+                              formatBalance(item.balance, item.decimals)
+                            ).toFixed(2)}
+                          </span>
+                        ))}
                       </div>
                       <div className={styles.flexItemsDiv}>
                         <span>New $YFDAI2 Balance</span>
-                        <span>0.00000 YFDA2</span>
+
+                        <span>0.00000 YFDAI</span>
                       </div>
                       <div className={styles.flexItemsDiv}>
                         <span>Free NFT Claimed</span>
@@ -241,8 +247,8 @@ const TokenSwap = () => {
                     </div>
                   </div>
                   <div className={styles.secondSection}>
-                    {result.map((item) => (
-                      <div className={styles.flexParent2}>
+                    {result.map((item, index) => (
+                      <div className={styles.flexParent2} key={index}>
                         <div className={styles.flexItemsDiv2}>
                           <div className={styles.formParent}>
                             <label>
