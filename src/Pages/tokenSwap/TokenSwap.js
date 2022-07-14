@@ -21,7 +21,7 @@ const TokenSwap = () => {
     approve: false,
     swap: false,
   });
-  const [stakeValue, setStakeValue] = useState(false);
+  const [ setStakeValue] = useState(false);
   let userYfdaiBal;
 
   const setProcessFunction = (id) => {
