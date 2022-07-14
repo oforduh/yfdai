@@ -21,7 +21,7 @@ const TokenSwap = () => {
     approve: false,
     swap: false,
   });
-  const [ setStakeValue] = useState(false);
+  const [stakeValue, setStakeValue] = useState(null);
   let userYfdaiBal;
 
   const setProcessFunction = (id) => {
@@ -235,17 +235,34 @@ const TokenSwap = () => {
                       <div className={styles.flexParent2}>
                         <div className={styles.flexItemsDiv2}>
                           <div className={styles.formParent}>
+                            <label>
+                              SWAP YFDAI <span>(Deposit $YFDAI (ERC-20)</span>
+                            </label>
                             <div className={styles.formGroup}>
-                              <label>
-                                SWAP YFDAI <span>(Deposit $YFDAI (ERC-20)</span>
-                              </label>
                               <input
-                                type="text"
-                                value={userYfdaiBal}
+                                type="number"
+                                value={stakeValue}
                                 onChange={(e) => {
                                   setStakeValue(e.target.value);
                                 }}
                               />
+                              <div className={styles.maxButton}>
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    setStakeValue(
+                                      parseFloat(
+                                        formatBalance(
+                                          item.balance,
+                                          item.decimals
+                                        )
+                                      ).toFixed(2)
+                                    );
+                                  }}
+                                >
+                                  max
+                                </button>
+                              </div>
                             </div>
                           </div>
                           <div className={styles.approveParent}>
