@@ -190,7 +190,7 @@
         // border: 2px solid red;
         display: grid;
         place-items: center;
-        font-size: 30px;
+        font-size: 15px;
         color: var(--primary);
       }
       .loadingStyling {
@@ -312,6 +312,7 @@
         }
       }
       .swapParentContainer {
+        // border: 3px solid red;
         .swapParentContent {
           width: 100%;
           //   border: 1px solid blue;
@@ -364,6 +365,9 @@
               }
             }
           }
+          // .swapParentContent {
+          //   border: 3px solid blue;
+          // }
         }
       }
     }
@@ -438,6 +442,9 @@
                 }
               }
             }
+          }
+          .notEligible {
+            font-size: 14px;
           }
         }
       }
